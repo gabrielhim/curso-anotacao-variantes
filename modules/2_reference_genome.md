@@ -1,6 +1,6 @@
 # Preparação do genoma de referência
 
-O genoma de referência escolhido para esse curso foi o hs37-1kg. Esse genoma de referência segue boas práticas para análises de NGS e pode ser facilmente baixado da internet. A seguir estão as etapas de preparação dele.
+O genoma de referência escolhido para esse curso foi o hs37-1kg. Esse genoma segue boas práticas para análises de NGS e pode ser facilmente baixado da internet. A seguir estão as etapas de preparação dele.
 
 ## 1. Download
 Comece baixando o FASTA e o índice do repositório de dados do 1000 Genomes.
@@ -17,7 +17,7 @@ gunzip human_g1k_v37.fasta.gz
 ```
 
 ## 3. Filtragem
-Crie uma pasta para armazenar a referência. Depois, utilize o samtools para criar um arquivo FASTA apenas com o cromossomo 20.
+Crie uma pasta para armazenar a referência. Depois, utilize o samtools para criar um arquivo FASTA do cromossomo 20.
 ```bash
 mkdir -p references
 samtools faidx human_g1k_v37.fasta 20 > references/human_g1k_v37_20.fasta

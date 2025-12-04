@@ -24,5 +24,5 @@ O objetivo deste curso é trazer noções básicas de anotação de variantes na
 * RefSeq: https://www.ncbi.nlm.nih.gov/refseq/about/
 * bcftools annotate: https://samtools.github.io/bcftools/bcftools.html#annotate
 * VEP options: https://www.ensembl.org/info/docs/tools/vep/script/vep_options.html
-* VEP custom annotations: https://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
+* VEP annotation sources: https://www.ensembl.org/info/docs/tools/vep/script/vep_cache.html
 * Which human reference genome to use?: https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use

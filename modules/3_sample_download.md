@@ -1,6 +1,6 @@
 # Preparação de uma amostra teste
 
-Este curso utiliza o VCF HG005.singleSampleVC.filter.vcf do Genomes in a Bottle (GIAB) como input. Ele foi gerado com o genoma de referência hs37d5, que é compatível com o genoma disponível neste projeto.
+Este curso utiliza o VCF HG005.singleSampleVC.filter.vcf do [Genomes in a Bottle](https://www.nist.gov/programs-projects/genome-bottle) como input. Ele foi gerado com o genoma de referência hs37d5, que é compatível com o genoma disponível neste projeto.
 
 ## 1. Download
 Baixe o arquivo utilizando o wget:

@@ -14,7 +14,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/annotation_releases/
 ```
 
 ### 2. Criação de lista de cromossomos
-Uma etapa necessária para o VEP é criar um arquivo acessório contendo um de-para do nome padrão do cromossomo (ex: "20") para o identificador da sequência no RefSeq (no caso, "NC_000020.10"). Isso permite que o VEP faça anotações utilizando o NC_.
+Uma etapa necessária para o VEP é criar um arquivo acessório contendo um de-para do nome do cromossomo no VCF ("20") para o identificador da sequência no RefSeq (no caso, "NC_000020.10"). Isso permite que o VEP faça anotações utilizando o NC_.
 
 ```bash
 mkdir -p databases
@@ -23,17 +23,17 @@ grep "NC_" GCF_000001405.25_GRCh37.p13_assembly_report.txt | \
 ```
 
 ### 3. Filtragem
-Remova o cabeçalho e crie um GFF apenas com o cromossomo 20.
+Remova o cabeçalho e crie um GFF com anotações do cromossomo 20.
 ```bash
 zgrep -v ^# GCF_000001405.25_GRCh37.p13_genomic.gff.gz | grep ^NC_000020 > filtered.gff
 ```
 
-### 4. Compactação e indexação
-Ordene as posições para permitir a indexação.
+Depois, ordene as posições para permitir a indexação.
 ```bash
 sort -k1,1 -k4,4n -k5,5n -t$'\t' filtered.gff > sorted.gff
 ```
 
+### 4. Compactação e indexação
 Faça a compactação e indexação do arquivo final.
 ```bash
 bgzip -c sorted.gff > databases/refseq_20.gff.gz
@@ -60,7 +60,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/weekly/clinvar_20251201.v
 ```
 
 ### 2. Filtragem do VCF
-Utilize o bcftools para filtrar o VCF apenas para o cromossomo 20.
+Utilize o bcftools para criar um VCF do cromossomo 20.
 ```bash
 bcftools view clinvar_20251201.vcf.gz -r 20 -o clinvar_filt.vcf
 ```
