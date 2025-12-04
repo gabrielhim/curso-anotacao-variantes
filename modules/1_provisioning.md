@@ -1,18 +1,19 @@
-# Preparação do ambiente
+# Provisionamento do ambiente
 
 As ferramentas de bioinformática utilizadas neste curso serão providenciadas dentro de um container Docker. Instanciaremos um container contendo essas ferramentas e rodaremos todos os comandos de bioinformática lá dentro.
 
-Pré-requisitos:
-1. Docker instalado (https://www.docker.com/get-started/).
-2. Acesso à internet.
+Há duas formas de rodar os comandos apresentados neste curso. A primeira é local e requer o [Docker](https://www.docker.com/) instalado. A segunda é remota utilizando o [GitHub Codespaces](https://github.com/features/codespaces).
 
-## 1. Clonagem do projeto
-Comece clonando o repositório para seu ambiente de execução e entrando nele pela linha de comando.
+## 1. Preparação
 
+**Local**
+Se sua intenção for rodar os comandos localmente, comece clonando o repositório para seu ambiente de execução e entrando nele pela linha de comando.
 ```bash
 git clone https://github.com/gabrielhim/curso-anotacao-variantes.git
 cd curso-anotacao-variantes
 ```
+**GitHub Codespaces**
+Se sua intenção for usar o GitHub Codespaces, abra o repositório no navegador e vá em `Code` > `Codespaces` > `Create codespace on main`. Será aberta uma aba com um ambiente virtual disponível para você utilizar. Esse ambiente já possui o Docker.
 
 ## 2. Montagem da imagem Docker
 Faça o build da imagem:

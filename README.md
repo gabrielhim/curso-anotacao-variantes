@@ -8,7 +8,7 @@ O objetivo deste curso é trazer noções básicas de anotação de variantes na
 
 ## Etapas
 
-[**1. Preparação do ambiente com Docker**](modules/1_environment.md)
+[**1. Provisionamento do ambiente**](modules/1_provisioning.md)
 
 [**2. Preparação do genoma de referência**](modules/2_reference_genome.md)
 
