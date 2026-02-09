@@ -6,13 +6,14 @@ Há duas formas de rodar os comandos apresentados neste curso. A primeira é loc
 
 ## 1. Preparação
 
-**Local**
+### Local
 Se sua intenção for rodar os comandos localmente, comece clonando o repositório para seu ambiente de execução e entrando nele pela linha de comando.
 ```bash
 git clone https://github.com/gabrielhim/curso-anotacao-variantes.git
 cd curso-anotacao-variantes
 ```
-**GitHub Codespaces**
+
+### GitHub Codespaces
 Se sua intenção for usar o GitHub Codespaces, abra o repositório no navegador e vá em `Code` > `Codespaces` > `Create codespace on main`. Será aberta uma aba com um ambiente virtual disponível para você utilizar. Esse ambiente já possui o Docker.
 
 ## 2. Montagem da imagem Docker
@@ -28,7 +29,7 @@ O processo de montagem da imagem leva alguns minutos. Esse comando utiliza o Doc
 * VEP v115.2
 
 ## 3. Criação do container
-Uma vez concluído, podemos iniciar um container. Certifique-se que você está na pasta raíz do projeto do curso e rode o seguinte comando:
+Uma vez concluído, podemos iniciar um container. Certifique-se que você está na pasta raiz do projeto do curso e rode o seguinte comando:
 ```bash
 docker run --rm -it -v .:/rsg-brazil -w /rsg-brazil curso-anotacao:v1
 ```

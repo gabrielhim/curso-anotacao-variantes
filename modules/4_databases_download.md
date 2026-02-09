@@ -25,7 +25,7 @@ grep "NC_" GCF_000001405.25_GRCh37.p13_assembly_report.txt | \
 ### 3. Filtragem
 Remova o cabeçalho e crie um GFF com anotações do cromossomo 20.
 ```bash
-zgrep -v ^# GCF_000001405.25_GRCh37.p13_genomic.gff.gz | grep ^NC_000020 > filtered.gff
+zgrep -v "^#" GCF_000001405.25_GRCh37.p13_genomic.gff.gz | grep ^NC_000020 > filtered.gff
 ```
 
 Depois, ordene as posições para permitir a indexação.
@@ -88,8 +88,7 @@ bgzip -c clinvar_norm.vcf > databases/clinvar_20.vcf.gz
 tabix -p vcf databases/clinvar_20.vcf.gz
 ```
 
-Uma vez concluído, faça a remoção dos arquivos iniciais e intermediários.
+Uma vez concluído, remova os arquivos iniciais e intermediários.
 ```bash
 rm clinvar_20251201.vcf.gz* clinvar_*.vcf
 ```
-
